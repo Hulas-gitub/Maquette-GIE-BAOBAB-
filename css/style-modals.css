@@ -1,0 +1,306 @@
+     .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .success-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            min-width: 350px;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+        
+        .success-toast.show {
+            transform: translateX(0);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .radio-custom {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #1B61AB;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .radio-custom:checked::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #1B61AB;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        select, input, textarea {
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: #1B61AB;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            z-index: 1000;
+        }
+        
+        .has-dropdown {
+            position: relative;
+        }
+        
+        .has-dropdown:hover .dropdown {
+            display: block;
+        }
+
+     .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .radio-custom {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #1B61AB;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .radio-custom:checked::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #1B61AB;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        select, input, textarea {
+            border: 1px solid #e5e7eb;
+            padding: 10px 12px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: #1B61AB;
+        }
+        
+        /* Style personnalisé pour Toastify */
+        .toastify {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            border-radius: 12px !important;
+            padding: 16px 20px !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+            font-family: system-ui, -apple-system, sans-serif !important;
+        }
+        
+        .toastify-text {
+            font-size: 15px !important;
+            font-weight: 500 !important;
+        }
+
+
+        /* CSS pour corriger le menu mobile */
+@media screen and (max-width: 767px) {
+    /* Menu mobile - fond blanc stable */
+    .fh5co-nav .top-menu .menu-1 {
+        background-color: #ffffff !important;
+        position: relative !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    /* Liste du menu mobile */
+    .fh5co-nav .top-menu .menu-1 ul {
+        background-color: #ffffff !important;
+        display: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Quand le menu est ouvert */
+    .fh5co-nav .top-menu .menu-1 ul.visible {
+        display: block !important;
+    }
+    
+    /* Items du menu mobile */
+    .fh5co-nav .top-menu .menu-1 ul li {
+        width: 100% !important;
+        display: block !important;
+        border-bottom: 1px solid #f0f0f0 !important;
+    }
+    
+    /* Liens du menu mobile */
+    .fh5co-nav .top-menu .menu-1 ul li a {
+        color: #000000 !important;
+        padding: 15px 20px !important;
+        display: block !important;
+        font-weight: bold !important;
+    }
+    
+    /* Hover sur mobile */
+    .fh5co-nav .top-menu .menu-1 ul li a:hover {
+        background-color: #f8f8f8 !important;
+        color: #195AA2 !important;
+    }
+    
+    /* Dropdown dans le menu mobile */
+    .fh5co-nav .top-menu .menu-1 .has-dropdown .dropdown {
+        position: relative !important;
+        background-color: #f8f8f8 !important;
+        box-shadow: none !important;
+        display: none !important;
+        padding-left: 20px !important;
+    }
+    
+    /* Dropdown visible */
+    .fh5co-nav .top-menu .menu-1 .has-dropdown .dropdown.show {
+        display: block !important;
+    }
+    
+    /* Items du dropdown mobile */
+    .fh5co-nav .top-menu .menu-1 .has-dropdown .dropdown li a {
+        color: #000000 !important;
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+    }
+    
+    /* Boutons CTA en mobile */
+    .fh5co-nav .top-menu .menu-1 ul li.btn-cta a {
+        background-color: #195AA2 !important;
+        color: #ffffff !important;
+        margin: 10px 20px !important;
+        border-radius: 5px !important;
+        text-align: center !important;
+    }
+}
+
+/* Desktop & Tablette - Dropdown avec fond blanc */
+@media screen and (min-width: 768px) {
+    .has-dropdown .dropdown {
+        background-color: #ffffff !important;
+    }
+    
+    .has-dropdown .dropdown li a {
+        color: #000000 !important;
+    }
+    
+    .has-dropdown .dropdown li a:hover {
+        color: #195AA2 !important;
+        background-color: #f9fafb !important;
+    }
+}
